@@ -1,5 +1,5 @@
 
-# Username Fetcher Program
+# Fragment Username Sales Scraper
 
 This program fetches information about sold Telegram usernames from the Fragment marketplace. It retrieves and displays statistics such as the average price, minimum price, maximum price, and corresponding usernames. The program also converts TON prices into USD based on real-time exchange rates.
 
@@ -56,7 +56,7 @@ This program fetches information about sold Telegram usernames from the Fragment
         -   `2`: Price low to high.
         -   `3`: Recently listed.
         -   `4`: End time.
-        
+
 ## Example Output
 
 ```
