@@ -1,13 +1,10 @@
 import requests
 import os
+import pandas as pd
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
-import pandas as pd
 
 def get_ton_to_usd_rate():
-    """
-    Fetch the current exchange rate of 1 TON to USD from CoinCodex.
-    """
     try:
         response = requests.get("https://coincodex.com/api/coincodex/get_coin/toncoin")
         if response.status_code == 200:
@@ -44,7 +41,7 @@ def fetch_usernames(search_term, sort_option):
     load_dotenv()
 
     cookies = {
-        "stel_ssid": os.getenv("STEL_SSDI"),  # Replace with actual cookie
+        "stel_ssid": os.getenv("STEL_SSDI"),
     }
 
     data = {
