@@ -10,7 +10,6 @@ A Python program that scrapes sales data of Telegram usernames from the Fragment
     
     ```bash
     pip install requests beautifulsoup4 python-dotenv pandas
-    
     ```
     
 3.  **Environment Variable**:
@@ -19,7 +18,6 @@ A Python program that scrapes sales data of Telegram usernames from the Fragment
         
         ```
         STEL_SSDI=your_stel_ssid_value
-        
         ```
         
 
@@ -42,7 +40,6 @@ A Python program that scrapes sales data of Telegram usernames from the Fragment
         
         ```bash
         python fragment_sales_scraper.py
-        
         ```
         
 2.  **Input Search Term**:
@@ -78,7 +75,6 @@ Sales Data:
 2  @example3   80.0  Sold
 
 Data saved to sales_data_test.csv
-
 ```
 
 ## Notes
