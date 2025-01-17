@@ -1,7 +1,7 @@
 
 # Fragment Username Sales Scraper
 
-This program fetches information about sold Telegram usernames from the Fragment marketplace. It retrieves and displays statistics such as the average price, minimum price, maximum price, and corresponding usernames. The program also converts TON prices into USD based on real-time exchange rates.
+A Python program that scrapes sales data of Telegram usernames from the Fragment marketplace. It provides detailed statistics such as average, minimum, and maximum prices in TON and USD, and saves the results to a CSV file. The program also integrates real-time TON-to-USD exchange rate conversion using the CoinCodex API.
 
 ## Prerequisites
 
@@ -25,14 +25,13 @@ This program fetches information about sold Telegram usernames from the Fragment
 
 ## How to Obtain `stel_ssid`
 
-1.  Open your browser go to the Fragment marketplace.
-2.  Use the "Private Window" or "Incognito Mode."
-3.  Open the developer tools (usually accessible with `F12` or `Ctrl+Shift+I`).
-4.  Navigate to the "Network" tab.
-5.  Perform a search or any interaction that makes a request to the `https://fragment.com` domain.
-6.  Look for a request to the endpoint `https://fragment.com/api?hash=6bc2314d461dbf7309`.
-7.  Under the "Cookies" section of the request, find `stel_ssid` and copy its value.
-8.  Paste this value into your `.env` file as shown above.
+1.  Open your browser in "Private Window" or "Icognito Mode" and go to the Fragment marketplace.
+2.  Open the developer tools (usually accessible with `F12` or `Ctrl+Shift+I`).
+3.  Navigate to the "Network" tab.
+4.  Perform a search or any interaction that makes a request to the `https://fragment.com` domain.
+5.  Look for a request to the endpoint `https://fragment.com/api?hash=6bc2314d461dbf7309`.
+6.  Under the "Cookies" section of the request, find `stel_ssid` and copy its value.
+7.  Paste this value into your `.env` file as shown above.
 
 ## How to Use the Program
 
