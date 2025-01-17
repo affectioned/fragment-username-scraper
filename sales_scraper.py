@@ -4,6 +4,23 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import pandas as pd
 
+def get_ton_to_usd_rate():
+    """
+    Fetch the current exchange rate of 1 TON to USD from CoinCodex.
+    """
+    try:
+        response = requests.get("https://coincodex.com/api/coincodex/get_coin/toncoin")
+        if response.status_code == 200:
+            data = response.json()
+            return data.get("last_price_usd", 0)
+        else:
+            print("Failed to fetch exchange rate. Using default value of $2.0 per TON.")
+            return 2.0  # Default value if the API call fails
+    except Exception as e:
+        print(f"Error fetching exchange rate: {e}. Using default value of $2.0 per TON.")
+        return 2.0
+
+
 def fetch_usernames(search_term, sort_option):
     url = "https://fragment.com/api?hash=6bc2314d461dbf7309"
     headers = {
@@ -88,10 +105,12 @@ def fetch_usernames(search_term, sort_option):
                 min_price_username = df[df["Price"] == min_price]["Username"].values[0]
                 max_price_username = df[df["Price"] == max_price]["Username"].values[0]
 
+                ton_to_usd_rate = get_ton_to_usd_rate()
+
                 # Display statistics
-                print(f"\nAverage Price of Sold Usernames: {average_price:.2f}")
-                print(f"Minimum Price: {min_price:.2f} (Username: {min_price_username})")
-                print(f"Maximum Price: {max_price:.2f} (Username: {max_price_username})")
+                print(f"\nAverage Price of Sold Usernames: {average_price:.2f} TON (~${average_price * ton_to_usd_rate:.2f})")
+                print(f"Minimum Price: {min_price:.2f} TON (~${min_price * ton_to_usd_rate:.2f}) (Username: {min_price_username})")
+                print(f"Maximum Price: {max_price:.2f} TON (~${max_price * ton_to_usd_rate:.2f}) (Username: {max_price_username})")
 
                 print("\nSales Data:")
                 print(df)
