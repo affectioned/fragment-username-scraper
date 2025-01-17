@@ -25,7 +25,7 @@ This program fetches information about sold Telegram usernames from the Fragment
 
 ## How to Obtain `stel_ssid`
 
-1.  Open your browser and log in to the Fragment marketplace.
+1.  Open your browser go to the Fragment marketplace.
 2.  Use the "Private Window" or "Incognito Mode."
 3.  Open the developer tools (usually accessible with `F12` or `Ctrl+Shift+I`).
 4.  Navigate to the "Network" tab.
@@ -38,11 +38,11 @@ This program fetches information about sold Telegram usernames from the Fragment
 
 1.  **Run the Script**:
     
-    -   Save the script to a `.py` file (e.g., `fetch_usernames.py`).
+    -   Save the script to a `.py` file (e.g., `fragment_sales_scraper.py`).
     -   Run it from the command line:
         
         ```bash
-        python fetch_usernames.py
+        python fragment_sales_scraper.py
         
         ```
         
