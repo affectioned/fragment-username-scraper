@@ -56,22 +56,7 @@ This program fetches information about sold Telegram usernames from the Fragment
         -   `2`: Price low to high.
         -   `3`: Recently listed.
         -   `4`: End time.
-4.  **View Results**:
-    
-    -   The program fetches the data and displays statistics, including:
-        -   Average price in TON and USD.
-        -   Minimum and maximum prices with usernames.
-    -   The results are also saved to a CSV file in the format `sales_data_<search_term>.csv`.
-
-## Features
-
--   Fetches real-time exchange rates for TON to USD using the CoinCodex API.
--   Displays the following statistics:
-    -   **Average Price**: The mean price of sold usernames.
-    -   **Minimum Price**: The lowest price and corresponding username.
-    -   **Maximum Price**: The highest price and corresponding username.
--   Saves data to a CSV file for further analysis.
-
+        
 ## Example Output
 
 ```
@@ -101,21 +86,3 @@ Data saved to sales_data_test.csv
 
 -   Ensure the `stel_ssid` is valid; otherwise, requests will fail.
 -   The default exchange rate is $2.00 per TON if the real-time fetch fails.
-
-## Troubleshooting
-
-1.  **No Data Returned**:
-    
-    -   Verify that your search term is correct.
-    -   Check your `stel_ssid` value in the `.env` file.
-2.  **Failed to Fetch Exchange Rate**:
-    
-    -   Ensure you have an active internet connection.
-    -   Check if the CoinCodex API endpoint is accessible.
-3.  **Invalid JSON Response**:
-    
-    -   Ensure the Fragment API has not changed its response format.
-
-## License
-
-This program is open-source and free to use.
